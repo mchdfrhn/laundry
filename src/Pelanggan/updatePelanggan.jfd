@@ -1,0 +1,58 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq l {par l {comp label2:::p::p, comp label3::l:p::p, comp label1::l:p::p}, space u:::p, par l {par t:::p {comp nama::l::250:x, comp telepon::l::250:x, comp alamat::t::250:x}, seq l {space :p:9:p, comp bSimpan:::p::p, space :p:38:p, comp bBatal:::p::p}}, space ::12:x}, seq t {comp id:::p::p, space ::69:x, comp lfPelanggan:::p::p, space :p:71:p}}}}"
+			"$verticalGroup": "par l {seq l {par l {seq {space :p:12:p, comp lfPelanggan:::p::p}, seq t {space :::p, comp id:::p::p}}, space u:::p, par b {comp nama::b:p::p, comp label1::b:p::p}, space :::p, par b {comp telepon::b:p::p, comp label2::b:p::p}, space :::p, par b {comp alamat::b:p:50:p, comp label3::b:p::p}, space s:::p, par b {comp bBatal::b:p::p, comp bSimpan::b:p::p}, space ::25:x}}"
+		} ) {
+			name: "this"
+			"$locationPolicy": 1
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Nama"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Telepon"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Alamat"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "nama"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "telepon"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "alamat"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bSimpan"
+				"text": "Ubah"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bSimpan", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bBatal"
+				"text": "Batal"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bBatal", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lfPelanggan"
+				"text": "Ubah Data Pelanggan"
+				"font": new java.awt.Font( "Segoe UI", 1, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "id"
+				"text": "Id"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 325, 260 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

@@ -1,0 +1,52 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq l {space :::p, par l {comp label2:::p::p, comp label1::l:p::p, comp id::l:p::p}, space u:::p, par l {par t:::p {comp nama::l::250:x, comp harga::l::250:x}, seq l {space :p:8:p, comp lfLayanan:::p::p}}}, seq l {space :p:91:p, comp bSimpan:::p::p, space :p:34:p, comp bBatal:::p::p}}, space ::10:x}}"
+			"$verticalGroup": "par l {seq l {par l {seq {space :p:12:p, comp lfLayanan:::p:22:p}, seq t {space :::p, comp id:::p::p}}, space u:::p, par b {comp nama::b:p::p, comp label1::b:p::p}, space :::p, par b {comp harga::b:p::p, comp label2::b:p::p}, space s:::p, par b {comp bSimpan::b:p::p, comp bBatal::b:p::p}, space ::31:x}}"
+		} ) {
+			name: "this"
+			"$locationPolicy": 1
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Nama Layanan"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Harga/Kilogram"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "nama"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "harga"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bSimpan"
+				"text": "Ubah"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bSimpan", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bBatal"
+				"text": "Batal"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bBatal", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bBatal", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lfLayanan"
+				"text": "Ubah Data Layanan"
+				"font": new java.awt.Font( "Segoe UI", 1, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "id"
+				"text": "Id"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 365, 210 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

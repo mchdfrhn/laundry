@@ -1,0 +1,117 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp label4::l:p::p, comp label3::l:p::p, comp label5::l:p::p, comp label6::l:p::p, comp label7::l:p::p, comp label8::l:p::p, comp label9::l:p::p, comp label2::l:p::p}, space s:::p, par l {seq {par l {seq {comp label18:::p:25:p, space :::p, comp total:::p:247:p}, seq {comp label17:::p:25:p, space :::p, comp status:::p:247:p}, seq {comp label15:::p:25:p, space :::p, comp berat:::p:247:p}, seq {comp label14:::p:25:p, space :::p, comp layanan:::p:247:p}, seq l {comp label12:::p:25:p, space :::p, comp pelanggan:::p:247:p}, seq {comp label16:::p:25:p, space :::p, comp subtotal:::p:247:p}, seq l {comp label11:::p:25:p, space :::p, comp tanggal:::p:247:p}}, space :0:5:x}, seq l {comp label13:::p:25:p, space :::p, par l {seq {comp label1:::p::p, space :0:138:x}, comp id:::::x}}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p::p, space :p:26:p, par b {comp label13::b:p::p, comp id::b:p::p, comp label2::b:p::p}, space :::p, par b {comp label3::b:p::p, comp label12::b:p::p, comp pelanggan::b:p::p}, space :::p, par l {par b {comp label4::b:p::p, comp label11::b:p::p}, comp tanggal::l:p::p}, space :::p, par l {par b {comp label5::b:p::p, comp label14::b:p::p}, comp layanan::l:p::p}, space :::p, par l {par b {comp label6::b:p::p, comp label15::b:p::p}, comp berat::l:p::p}, space :::p, par l {par b {comp label7::b:p::p, comp label16::b:p::p}, comp subtotal::l:p::p}, space :::p, par l {par b {comp label8::b:p::p, comp label17::b:p::p}, comp status::l:p::p}, space :::p, par l {par b {comp label9::b:p::p, comp label18::b:p::p}, comp total::l:p::p}, space ::25:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Detail Pesanan"
+				"font": new java.awt.Font( "Segoe UI", 1, 16 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "ID"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Pelanggan"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Tanggal Pesanan"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Layanan"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Berat"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Subtotal"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Status"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": "Total Harga"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label11"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label12"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label13"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label14"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label15"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label16"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label17"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label18"
+				"text": ":"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "id"
+				"text": "id"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "pelanggan"
+				"text": "pelanggan"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "tanggal"
+				"text": "tanggal_pesanan"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "layanan"
+				"text": "layanan"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "berat"
+				"text": "berat"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "subtotal"
+				"text": "subtotal"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "status"
+				"text": "status"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "total"
+				"text": "total_harga"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 405, 280 )
+		} )
+	}
+}

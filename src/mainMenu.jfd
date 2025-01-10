@@ -1,0 +1,55 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, comp label2:::p::p, space ::637:x}}"
+			"$verticalGroup": "par l {seq t {space ::404:x, comp label2:::p::p, space :::p}}"
+		} ) {
+			name: "this"
+			"$locationPolicy": 1
+			"$sizePolicy": 1
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "©2025"
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "mMaster"
+					"text": "Master"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iPelanggan"
+						"text": "Pelanggan"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iPelangganAction", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iPelanggan", true ) )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iPelanggan", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iLayanan"
+						"text": "Layanan"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iLayanan", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "mPesanan"
+					"text": "Pesanan"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iBuat"
+						"text": "Buat Pesanan"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "iLihat"
+						"text": "Lihat Pesanan"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "iLihat", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 680, 480 )
+		} )
+	}
+}

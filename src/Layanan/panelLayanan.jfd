@@ -1,0 +1,48 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq {space :0:399:x, comp bTambah:::p::p, space :::p, comp bEdit:::p::p, space :::p, comp bHapus:::p::p}, comp pnlLayanan::t::641:x}, space :::p}, seq t {space ::284:x, comp lLayanan:::p::p, space :p:273:p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp lLayanan:::p::p, space :p:18:p, par b {comp bHapus::b:p::p, comp bEdit::b:p::p, comp bTambah::b:p::p}, space :::p, comp pnlLayanan:::p:356:p, space ::10:x}}"
+		} ) {
+			name: "this"
+			"font": new java.awt.Font( "Segoe UI", 0, 12 )
+			"$locationPolicy": 1
+			"resizable": false
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lLayanan"
+				"text": "LAYANAN"
+				"font": new java.awt.Font( "Segoe UI", 1, 20 )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bTambah"
+				"text": "Tambah"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bTambah", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bTambah", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bEdit"
+				"text": "Ubah"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bEdit", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bHapus"
+				"text": "Hapus"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bHapus", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "pnlLayanan"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "tblLayanan"
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tLayananMouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tblLayananMouseClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 655, 480 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}
