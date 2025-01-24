@@ -4,7 +4,7 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :::p, par l {seq {space :0:384:x, comp bDetail:::p::p, space :::p, comp bEdit:::p::p, space :::p, comp bHapus:::p::p}, comp tPesanan::t::641:x}, space :::p}, seq t {space ::284:x, comp lPesanan:::p::p, space :p:275:p}}"
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq {space :0:358:x, comp bDetail:::p::p, space :::p, comp bEdit:::p::p, space :::p, comp bHapus:::p::p, space :p:26:p}, comp tPesanan::t::641:x}, space :::p}, seq t {space ::284:x, comp lPesanan:::p::p, space :p:275:p}}"
 			"$verticalGroup": "par l {seq l {space :::p, comp lPesanan:::p::p, space :p:18:p, par b {comp bHapus::b:p::p, comp bEdit::b:p::p, comp bDetail::b:p::p}, space :::p, comp tPesanan:::p:356:p, space ::10:x}}"
 		} ) {
 			name: "this"
@@ -21,16 +21,7 @@ new FormModel {
 				"text": "Lihat Detail"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bTambah", true ) )
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bTambah", true ) )
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "bEdit"
-				"text": "Ubah"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bEdit", true ) )
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "bHapus"
-				"text": "Hapus"
-				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bHapus", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "bDetail", true ) )
 			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "tPesanan"
@@ -39,7 +30,16 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JTable" ) {
 					name: "tblPesanan"
 					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tblPelangganMouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "tblPesananMouseClicked", true ) )
 				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bEdit"
+				"text": "Ubah"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "bHapus"
+				"text": "Hapus"
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"size": new java.awt.Dimension( 655, 480 )

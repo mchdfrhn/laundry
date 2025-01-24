@@ -57,10 +57,6 @@ public class addPelanggan extends JFrame {
         alamat.setText("");
     }
 
-    private void bTambah(ActionEvent e) {
-        // TODO add your code here
-    }
-
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - Mochamad Farhan Ali
@@ -90,7 +86,6 @@ public class addPelanggan extends JFrame {
         //---- bSimpan ----
         bSimpan.setText("Tambah");
         bSimpan.addActionListener(e -> {
-			bTambah(e);
 			bSimpan(e);
 		});
 

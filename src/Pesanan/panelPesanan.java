@@ -24,7 +24,7 @@ public class panelPesanan extends JFrame {
     private ResultSet rs;
     private DefaultTableModel tModel;
     private Connection conn = connectionDB.connect();
-    private Pelanggan selectData;
+    private Pesanan selectData;
 
     public panelPesanan() {
         initComponents();
@@ -72,28 +72,23 @@ public class panelPesanan extends JFrame {
         }
     }
 
-    private void bTambah(ActionEvent e) {
-        // TODO add your code here
+    private void tblPesananMouseClicked(MouseEvent e) {
+        String id = tblPesanan.getValueAt(tblPesanan.getSelectedRow(), 0).toString();
+        String pelanggan = tblPesanan.getValueAt(tblPesanan.getSelectedRow(), 1).toString();
+        String tanggal = tblPesanan.getValueAt(tblPesanan.getSelectedRow(), 2).toString();
+        String status = tblPesanan.getValueAt(tblPesanan.getSelectedRow(), 3).toString();
+        String total = tblPesanan.getValueAt(tblPesanan.getSelectedRow(), 4).toString();
+
+        this.selectData = new Pesanan(id, pelanggan, tanggal, status, total);
+
+        bDetail.setEnabled(true);
+        bEdit.setEnabled(true);
+        bHapus.setEnabled(true);
     }
 
-    private void bEdit(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void bHapus(ActionEvent e) {
-        // TODO add your code here
-    }
-
-    private void tblPelangganMouseClicked(MouseEvent e) {
-        // TODO add your code here
-    }
-
-    private void pnlPelangganMouseClicked(MouseEvent e) {
-        // TODO add your code here
-    }
-
-    private void tPelangganMouseClicked(MouseEvent e) {
-        // TODO add your code here
+    private void bDetail(ActionEvent e) {
+        detailPesanan formDetail = new detailPesanan();
+        formDetail.setVisible(true);
     }
 
     private void initComponents() {
@@ -101,10 +96,10 @@ public class panelPesanan extends JFrame {
         // Generated using JFormDesigner Evaluation license - Mochamad Farhan Ali
         lPesanan = new JLabel();
         bDetail = new JButton();
-        bEdit = new JButton();
-        bHapus = new JButton();
         tPesanan = new JScrollPane();
         tblPesanan = new JTable();
+        bEdit = new JButton();
+        bHapus = new JButton();
 
         //======== this ========
         setFont(new Font("Segoe UI", Font.PLAIN, 12));
@@ -118,37 +113,26 @@ public class panelPesanan extends JFrame {
         //---- bDetail ----
         bDetail.setText("Lihat Detail");
         bDetail.addActionListener(e -> {
-			bTambah(e);
-			bTambah(e);
+			bDetail(e);
 		});
-
-        //---- bEdit ----
-        bEdit.setText("Ubah");
-        bEdit.addActionListener(e -> bEdit(e));
-
-        //---- bHapus ----
-        bHapus.setText("Hapus");
-        bHapus.addActionListener(e -> bHapus(e));
 
         //======== tPesanan ========
         {
-            tPesanan.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    pnlPelangganMouseClicked(e);
-                    tPelangganMouseClicked(e);
-                }
-            });
-
             //---- tblPesanan ----
             tblPesanan.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
-                    tblPelangganMouseClicked(e);
+                    tblPesananMouseClicked(e);
                 }
             });
             tPesanan.setViewportView(tblPesanan);
         }
+
+        //---- bEdit ----
+        bEdit.setText("Ubah");
+
+        //---- bHapus ----
+        bHapus.setText("Hapus");
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
@@ -158,12 +142,13 @@ public class panelPesanan extends JFrame {
                     .addContainerGap()
                     .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                            .addGap(0, 384, Short.MAX_VALUE)
+                            .addGap(0, 358, Short.MAX_VALUE)
                             .addComponent(bDetail)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(bEdit)
                             .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(bHapus))
+                            .addComponent(bHapus)
+                            .addGap(26, 26, 26))
                         .addComponent(tPesanan, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 641, Short.MAX_VALUE))
                     .addContainerGap())
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
@@ -194,9 +179,9 @@ public class panelPesanan extends JFrame {
     // Generated using JFormDesigner Evaluation license - Mochamad Farhan Ali
     private JLabel lPesanan;
     private JButton bDetail;
-    private JButton bEdit;
-    private JButton bHapus;
     private JScrollPane tPesanan;
     private JTable tblPesanan;
+    private JButton bEdit;
+    private JButton bHapus;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 }
